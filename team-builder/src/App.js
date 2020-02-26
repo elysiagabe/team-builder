@@ -3,6 +3,7 @@ import './App.css';
 import team from './team';
 import TeamMembers from './Components/TeamMembers';
 import TeamForm from './Components/TeamForm';
+import Header from './Components/Header';
 
 function App() {
 
@@ -21,9 +22,11 @@ function App() {
   
   return (
     <div className="App">
-      Goodbye
-      <TeamMembers teamMembers={teamMembers} />
-      <TeamForm addTeamMember={addTeamMember} />
+      <Header />
+      <div className="team-wrapper">
+        <TeamMembers teamMembers={teamMembers} />
+        <TeamForm addTeamMember={addTeamMember} />
+      </div>
     </div>
   );
 }

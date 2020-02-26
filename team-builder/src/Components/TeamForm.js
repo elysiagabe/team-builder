@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const TeamForm = ({addTeamMember}) => {
     // console.log(addTeamMember)
@@ -11,7 +11,7 @@ const TeamForm = ({addTeamMember}) => {
 
     const handleChange = e => {
         setTeamMember({...teamMember, [e.target.name]: e.target.value});
-        console.log(teamMember);
+        //console.log(teamMember);
     }
 
     const submitTeamForm = e => {
