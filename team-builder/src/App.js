@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       Goodbye
-      <TeamMembers />
+      <TeamMembers teamMembers={teamMembers} />
       <TeamForm />
     </div>
   );
