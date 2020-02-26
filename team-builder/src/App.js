@@ -8,12 +8,22 @@ function App() {
 
   const [teamMembers, setTeamMembers] = useState(team);
   console.log(teamMembers);
+
+  const addTeamMember = teamMember => {
+    const newTeamMember = {
+      id: Date.now(),
+      name: teamMember.name,
+      email: teamMember.email,
+      role: teamMember.role
+    };
+    setTeamMembers([...teamMembers, newTeamMember]);
+  }
   
   return (
     <div className="App">
       Goodbye
       <TeamMembers teamMembers={teamMembers} />
-      <TeamForm />
+      <TeamForm addTeamMember={addTeamMember} />
     </div>
   );
 }
