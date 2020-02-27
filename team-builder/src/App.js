@@ -10,7 +10,11 @@ function App() {
   const [teamMembers, setTeamMembers] = useState(team);
   // console.log(teamMembers);
 
-  const [memberToEdit, setMemberToEdit] = useState();
+  const [memberToEdit, setMemberToEdit] = useState({
+    name: "",
+    email: "",
+    role: ""
+});
 
   const addTeamMember = teamMember => {
     const newTeamMember = {
@@ -31,7 +35,7 @@ function App() {
     <div className="App">
       <Header />
       <TeamMembers teamMembers={teamMembers} editTeamMember={editTeamMember}/>
-      <TeamForm addTeamMember={addTeamMember} memberToEdit={memberToEdit} />
+      <TeamForm addTeamMember={addTeamMember} memberToEdit={memberToEdit} setMemberToEdit={setMemberToEdit} teamMembers={teamMembers} />
     </div>
   );
 }
