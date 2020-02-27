@@ -8,7 +8,9 @@ import Header from './Components/Header';
 function App() {
 
   const [teamMembers, setTeamMembers] = useState(team);
-  console.log(teamMembers);
+  // console.log(teamMembers);
+
+  const [memberToEdit, setMemberToEdit] = useState();
 
   const addTeamMember = teamMember => {
     const newTeamMember = {
@@ -19,13 +21,18 @@ function App() {
     };
     setTeamMembers([...teamMembers, newTeamMember]);
   }
+
+  const editTeamMember = teamMember => {
+    setMemberToEdit(teamMember);
+    //console.log(memberToEdit);
+  }
   
   return (
     <div className="App">
       <Header />
       <div className="team-wrapper">
-        <TeamMembers teamMembers={teamMembers} />
-        <TeamForm addTeamMember={addTeamMember} />
+        <TeamMembers teamMembers={teamMembers} editTeamMember={editTeamMember}/>
+        <TeamForm addTeamMember={addTeamMember} memberToEdit={memberToEdit} />
       </div>
     </div>
   );

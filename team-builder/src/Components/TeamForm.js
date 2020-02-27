@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-const TeamForm = ({addTeamMember}) => {
+const TeamForm = ({addTeamMember, memberToEdit}) => {
     // console.log(addTeamMember)
+    console.log(memberToEdit)
 
     const [teamMember, setTeamMember] = useState({
         name: "",
