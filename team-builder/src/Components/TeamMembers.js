@@ -5,7 +5,7 @@ const TeamMembers = ({teamMembers, editTeamMember}) => {
     // console.log(editTeamMember);
 
     return (
-        <>
+        <div className="team-wrapper">
             <h2>Meet the Team</h2>
             <div className="team">
                 {teamMembers.map(teamMember => (
@@ -16,11 +16,11 @@ const TeamMembers = ({teamMembers, editTeamMember}) => {
                             <button onClick={() => editTeamMember(teamMember)} className="edit-button"><img className="edit-icon" src={Icon} alt="edit"/></button>
                         </div>
                         <p>{teamMember.role}</p>
-                        <a href={"mailto: " + teamMember.email} className="email">Say Hello: {teamMember.email}</a>
+                        <a href={"mailto: " + teamMember.email} className="email"><strong>Say Hello: </strong> {teamMember.email}</a>
                     </div>
                 ))}
             </div>
-        </>
+        </div>
     )
 }
 

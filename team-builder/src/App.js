@@ -30,10 +30,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="team-wrapper">
-        <TeamMembers teamMembers={teamMembers} editTeamMember={editTeamMember}/>
-        <TeamForm addTeamMember={addTeamMember} memberToEdit={memberToEdit} />
-      </div>
+      <TeamMembers teamMembers={teamMembers} editTeamMember={editTeamMember}/>
+      <TeamForm addTeamMember={addTeamMember} memberToEdit={memberToEdit} />
     </div>
   );
 }
